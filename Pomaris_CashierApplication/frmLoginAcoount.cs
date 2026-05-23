@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using Item_Namespace;
+using UserAccountNamespace;
 
 namespace CashierApplication
 {
     public partial class frmLoginAcoount : Form
     {
-        Item itm = new Item();
+
+        Cashier cash;
 
         public frmLoginAcoount()
         {
             InitializeComponent();
+            this.cash = new Cashier("Roland Orlando", "blacksilence", "thisisthis", "Junior Fixer Dept.");
         }
 
 
@@ -30,38 +32,18 @@ namespace CashierApplication
         {
             bool valid = true;
 
-            label1.Visible = false;
-            lbPriceError.Visible = false;
-            label3.Visible = false;
-            label4.Visible = false;
-            label5.Visible = false;
+            lbPasswordError.Visible = false;
+            lbUsernameError.Visible = false;
 
-            double discount = validateDouble(txbxBrand.Texts);
-            double price = validateDouble(txbxPrice.Texts);
-            int quantity = validateInt(txbxColor.Texts);
-            double recieved = validateDouble(txbxRecieved.Texts);
-
-            if (txbxItem.Texts == null || txbxItem.Texts.Trim() == "")
+            if (txbxUsername.Texts == null || txbxUsername.Texts.Trim() == "")
             {
-                label5.Visible = true;
+                lbUsernameError.Visible = true;
                 valid = false;
             }
 
-            if (discount < 0 || discount > 100)
+            if (txbxPassword.Texts == null || txbxPassword.Texts.Trim() == "")
             {
-                label1.Visible = true;
-                valid = false;
-            }
-
-            if (price < 0)
-            {
-                lbPriceError.Visible = true;
-                valid = false;
-            }
-
-            if (quantity <= 0)
-            {
-                label3.Visible = true;
+                lbPasswordError.Visible = true;
                 valid = false;
             }
 
@@ -70,48 +52,26 @@ namespace CashierApplication
                 return;
             }
 
-            DiscountedItem di = new DiscountedItem(txbxItem.Texts, price, quantity, discount);
-            di.setPayment(recieved);
 
-            if (di.getTotalPrice() > recieved)
+            if (!cash.validateLogin(txbxUsername.Texts.Trim(), txbxPassword.Texts.Trim()))
             {
-                label4.Visible = true;
+                MessageBox.Show("Invalid username or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            txbxAmount.Text = di.getTotalPrice().ToString();
-            txbxChange.Text = di.getChange().ToString();
+            else
+            {
+                MessageBox.Show($"Login successful! Welcome, {cash.getFullName()} from {cash.getDepartment()}", "Login Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+                frmPurchaseDiscountedItem form = new frmPurchaseDiscountedItem();
+                form.Show();
+            }
+
         }
 
         private void btnCloseForm_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private double validateDouble(string value)
-        {
-            double result;
-            if (double.TryParse(value, out result))
-            {
-                return result;
-            }
-            else
-            {
-                return -1;
-            }
-        }
-
-        private int validateInt(string value)
-        {
-            int result;
-            if (int.TryParse(txbxColor.Texts, out result))
-            {
-                return result;
-            }
-            else
-            {
-                return -1;
-            }
         }
     }
 }

@@ -85,7 +85,7 @@ namespace CashierApplication
 
         private void btnCloseForm_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private double validateDouble(string value)
@@ -104,7 +104,7 @@ namespace CashierApplication
         private int validateInt(string value)
         {
             int result;
-            if (int.TryParse(txbxColor.Texts, out result))
+            if (int.TryParse(value, out result))
             {
                 return result;
             }
@@ -112,6 +112,18 @@ namespace CashierApplication
             {
                 return -1;
             }
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLoginAcoount loginForm = new frmLoginAcoount();
+            loginForm.Show();
         }
     }
 }

@@ -35,12 +35,12 @@
             this.pnHeader = new System.Windows.Forms.Panel();
             this.pnBody = new System.Windows.Forms.Panel();
             this.pnFields = new CashierApplication.RoundedPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbUsernameError = new System.Windows.Forms.Label();
+            this.lbPasswordError = new System.Windows.Forms.Label();
             this.lbUsername = new System.Windows.Forms.Label();
             this.lbPassword = new System.Windows.Forms.Label();
-            this.txbxItem = new CashierApplication.RoundedTxBx();
-            this.txbxBrand = new CashierApplication.RoundedTxBx();
+            this.txbxUsername = new CashierApplication.RoundedTxBx();
+            this.txbxPassword = new CashierApplication.RoundedTxBx();
             this.tblpnAddProduct.SuspendLayout();
             this.pnHeader.SuspendLayout();
             this.pnBody.SuspendLayout();
@@ -53,7 +53,7 @@
             this.lbHeader.BackColor = System.Drawing.SystemColors.Desktop;
             this.lbHeader.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbHeader.Location = new System.Drawing.Point(25, 18);
+            this.lbHeader.Location = new System.Drawing.Point(24, 13);
             this.lbHeader.Name = "lbHeader";
             this.lbHeader.Size = new System.Drawing.Size(124, 28);
             this.lbHeader.TabIndex = 1;
@@ -68,7 +68,7 @@
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.Black;
-            this.btnSubmit.Location = new System.Drawing.Point(0, 198);
+            this.btnSubmit.Location = new System.Drawing.Point(0, 247);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(0);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(351, 130);
@@ -88,7 +88,7 @@
             this.btnCloseForm.ForeColor = System.Drawing.Color.White;
             this.btnCloseForm.Location = new System.Drawing.Point(289, 0);
             this.btnCloseForm.Name = "btnCloseForm";
-            this.btnCloseForm.Size = new System.Drawing.Size(62, 69);
+            this.btnCloseForm.Size = new System.Drawing.Size(62, 58);
             this.btnCloseForm.TabIndex = 14;
             this.btnCloseForm.Text = "X";
             this.btnCloseForm.UseVisualStyleBackColor = false;
@@ -105,9 +105,9 @@
             this.tblpnAddProduct.Margin = new System.Windows.Forms.Padding(0);
             this.tblpnAddProduct.Name = "tblpnAddProduct";
             this.tblpnAddProduct.RowCount = 2;
-            this.tblpnAddProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
+            this.tblpnAddProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
             this.tblpnAddProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.63612F));
-            this.tblpnAddProduct.Size = new System.Drawing.Size(351, 367);
+            this.tblpnAddProduct.Size = new System.Drawing.Size(351, 411);
             this.tblpnAddProduct.TabIndex = 15;
             // 
             // pnHeader
@@ -120,7 +120,7 @@
             this.pnHeader.Location = new System.Drawing.Point(0, 0);
             this.pnHeader.Margin = new System.Windows.Forms.Padding(0);
             this.pnHeader.Name = "pnHeader";
-            this.pnHeader.Size = new System.Drawing.Size(351, 69);
+            this.pnHeader.Size = new System.Drawing.Size(351, 58);
             this.pnHeader.TabIndex = 0;
             this.pnHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnHeader_MouseDown);
             // 
@@ -130,62 +130,62 @@
             this.pnBody.Controls.Add(this.btnSubmit);
             this.pnBody.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pnBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnBody.Location = new System.Drawing.Point(0, 69);
+            this.pnBody.Location = new System.Drawing.Point(0, 58);
             this.pnBody.Margin = new System.Windows.Forms.Padding(0);
             this.pnBody.Name = "pnBody";
-            this.pnBody.Size = new System.Drawing.Size(351, 298);
+            this.pnBody.Size = new System.Drawing.Size(351, 353);
             this.pnBody.TabIndex = 1;
             // 
             // pnFields
             // 
             this.pnFields.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(35)))), ((int)(((byte)(37)))));
             this.pnFields.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(35)))), ((int)(((byte)(37)))));
-            this.pnFields.Controls.Add(this.label5);
-            this.pnFields.Controls.Add(this.label1);
+            this.pnFields.Controls.Add(this.lbUsernameError);
+            this.pnFields.Controls.Add(this.lbPasswordError);
             this.pnFields.Controls.Add(this.lbUsername);
             this.pnFields.Controls.Add(this.lbPassword);
-            this.pnFields.Controls.Add(this.txbxItem);
-            this.pnFields.Controls.Add(this.txbxBrand);
+            this.pnFields.Controls.Add(this.txbxUsername);
+            this.pnFields.Controls.Add(this.txbxPassword);
             this.pnFields.Cursor = System.Windows.Forms.Cursors.Default;
             this.pnFields.ForeColor = System.Drawing.Color.Transparent;
-            this.pnFields.Location = new System.Drawing.Point(0, -23);
+            this.pnFields.Location = new System.Drawing.Point(0, -22);
             this.pnFields.Margin = new System.Windows.Forms.Padding(0);
             this.pnFields.Name = "pnFields";
             this.pnFields.Radius = 50;
-            this.pnFields.Size = new System.Drawing.Size(351, 245);
+            this.pnFields.Size = new System.Drawing.Size(351, 293);
             this.pnFields.TabIndex = 15;
             this.pnFields.Thickness = 5F;
             // 
-            // label5
+            // lbUsernameError
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Tomato;
-            this.label5.Location = new System.Drawing.Point(138, 59);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 16);
-            this.label5.TabIndex = 39;
-            this.label5.Text = "Invalid username";
-            this.label5.Visible = false;
+            this.lbUsernameError.AutoSize = true;
+            this.lbUsernameError.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUsernameError.ForeColor = System.Drawing.Color.Tomato;
+            this.lbUsernameError.Location = new System.Drawing.Point(135, 70);
+            this.lbUsernameError.Name = "lbUsernameError";
+            this.lbUsernameError.Size = new System.Drawing.Size(96, 16);
+            this.lbUsernameError.TabIndex = 39;
+            this.lbUsernameError.Text = "Invalid username";
+            this.lbUsernameError.Visible = false;
             // 
-            // label1
+            // lbPasswordError
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Tomato;
-            this.label1.Location = new System.Drawing.Point(139, 135);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 16);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Invalid password";
-            this.label1.Visible = false;
+            this.lbPasswordError.AutoSize = true;
+            this.lbPasswordError.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPasswordError.ForeColor = System.Drawing.Color.Tomato;
+            this.lbPasswordError.Location = new System.Drawing.Point(135, 170);
+            this.lbPasswordError.Name = "lbPasswordError";
+            this.lbPasswordError.Size = new System.Drawing.Size(95, 16);
+            this.lbPasswordError.TabIndex = 30;
+            this.lbPasswordError.Text = "Invalid password";
+            this.lbPasswordError.Visible = false;
             // 
             // lbUsername
             // 
             this.lbUsername.AutoSize = true;
             this.lbUsername.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUsername.ForeColor = System.Drawing.Color.White;
-            this.lbUsername.Location = new System.Drawing.Point(51, 54);
+            this.lbUsername.Location = new System.Drawing.Point(48, 65);
             this.lbUsername.Name = "lbUsername";
             this.lbUsername.Size = new System.Drawing.Size(81, 21);
             this.lbUsername.TabIndex = 14;
@@ -196,70 +196,70 @@
             this.lbPassword.AutoSize = true;
             this.lbPassword.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPassword.ForeColor = System.Drawing.Color.White;
-            this.lbPassword.Location = new System.Drawing.Point(51, 130);
+            this.lbPassword.Location = new System.Drawing.Point(48, 165);
             this.lbPassword.Name = "lbPassword";
             this.lbPassword.Size = new System.Drawing.Size(77, 21);
             this.lbPassword.TabIndex = 4;
             this.lbPassword.Text = "Password";
             // 
-            // txbxItem
+            // txbxUsername
             // 
-            this.txbxItem.AutocompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txbxItem.AutocompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txbxItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.txbxItem.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txbxItem.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txbxItem.BorderRadius = 0;
-            this.txbxItem.BorderSize = 2;
-            this.txbxItem.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbxItem.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbxItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbxItem.Location = new System.Drawing.Point(44, 79);
-            this.txbxItem.Margin = new System.Windows.Forms.Padding(4);
-            this.txbxItem.MaxLength = 200;
-            this.txbxItem.Multiline = false;
-            this.txbxItem.Name = "txbxItem";
-            this.txbxItem.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txbxItem.PasswordChar = false;
-            this.txbxItem.PlaceholderColor = System.Drawing.Color.Gray;
-            this.txbxItem.PlaceholderText = "Username";
-            this.txbxItem.Size = new System.Drawing.Size(272, 32);
-            this.txbxItem.TabIndex = 0;
-            this.txbxItem.Texts = "";
-            this.txbxItem.UnderlinedStyle = false;
+            this.txbxUsername.AutocompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txbxUsername.AutocompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txbxUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.txbxUsername.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txbxUsername.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txbxUsername.BorderRadius = 0;
+            this.txbxUsername.BorderSize = 2;
+            this.txbxUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbxUsername.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txbxUsername.Location = new System.Drawing.Point(41, 90);
+            this.txbxUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txbxUsername.MaxLength = 200;
+            this.txbxUsername.Multiline = false;
+            this.txbxUsername.Name = "txbxUsername";
+            this.txbxUsername.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txbxUsername.PasswordChar = false;
+            this.txbxUsername.PlaceholderColor = System.Drawing.Color.Gray;
+            this.txbxUsername.PlaceholderText = "Username";
+            this.txbxUsername.Size = new System.Drawing.Size(272, 32);
+            this.txbxUsername.TabIndex = 0;
+            this.txbxUsername.Texts = "";
+            this.txbxUsername.UnderlinedStyle = false;
             // 
-            // txbxBrand
+            // txbxPassword
             // 
-            this.txbxBrand.AutocompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txbxBrand.AutocompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txbxBrand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.txbxBrand.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txbxBrand.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txbxBrand.BorderRadius = 0;
-            this.txbxBrand.BorderSize = 2;
-            this.txbxBrand.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbxBrand.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
-            this.txbxBrand.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbxBrand.Location = new System.Drawing.Point(44, 155);
-            this.txbxBrand.Margin = new System.Windows.Forms.Padding(4);
-            this.txbxBrand.MaxLength = 35;
-            this.txbxBrand.Multiline = false;
-            this.txbxBrand.Name = "txbxBrand";
-            this.txbxBrand.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txbxBrand.PasswordChar = false;
-            this.txbxBrand.PlaceholderColor = System.Drawing.Color.Gray;
-            this.txbxBrand.PlaceholderText = "Password";
-            this.txbxBrand.Size = new System.Drawing.Size(272, 32);
-            this.txbxBrand.TabIndex = 1;
-            this.txbxBrand.Texts = "";
-            this.txbxBrand.UnderlinedStyle = false;
+            this.txbxPassword.AutocompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txbxPassword.AutocompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txbxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.txbxPassword.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txbxPassword.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txbxPassword.BorderRadius = 0;
+            this.txbxPassword.BorderSize = 2;
+            this.txbxPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbxPassword.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+            this.txbxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txbxPassword.Location = new System.Drawing.Point(41, 190);
+            this.txbxPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txbxPassword.MaxLength = 35;
+            this.txbxPassword.Multiline = false;
+            this.txbxPassword.Name = "txbxPassword";
+            this.txbxPassword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txbxPassword.PasswordChar = false;
+            this.txbxPassword.PlaceholderColor = System.Drawing.Color.Gray;
+            this.txbxPassword.PlaceholderText = "Password";
+            this.txbxPassword.Size = new System.Drawing.Size(272, 32);
+            this.txbxPassword.TabIndex = 1;
+            this.txbxPassword.Texts = "";
+            this.txbxPassword.UnderlinedStyle = false;
             // 
             // frmLoginAcoount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.ClientSize = new System.Drawing.Size(351, 367);
+            this.ClientSize = new System.Drawing.Size(351, 411);
             this.Controls.Add(this.tblpnAddProduct);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -285,12 +285,12 @@
         private System.Windows.Forms.TableLayoutPanel tblpnAddProduct;
         private System.Windows.Forms.Panel pnHeader;
         private System.Windows.Forms.Panel pnBody;
-        private CashierApplication.RoundedTxBx txbxBrand;
+        private CashierApplication.RoundedTxBx txbxPassword;
         private System.Windows.Forms.Label lbUsername;
-        private CashierApplication.RoundedTxBx txbxItem;
+        private CashierApplication.RoundedTxBx txbxUsername;
         private CashierApplication.RoundedPanel pnFields;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbPasswordError;
+        private System.Windows.Forms.Label lbUsernameError;
     }
 }
 

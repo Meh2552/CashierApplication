@@ -35,6 +35,7 @@
             this.pnHeader = new System.Windows.Forms.Panel();
             this.pnBody = new System.Windows.Forms.Panel();
             this.pnFields = new CashierApplication.RoundedPanel();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txbxChange = new System.Windows.Forms.TextBox();
@@ -53,11 +54,15 @@
             this.lbDiscount = new System.Windows.Forms.Label();
             this.txbxItem = new CashierApplication.RoundedTxBx();
             this.txbxBrand = new CashierApplication.RoundedTxBx();
-            this.label5 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tblpnAddProduct.SuspendLayout();
             this.pnHeader.SuspendLayout();
             this.pnBody.SuspendLayout();
             this.pnFields.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbHeader
@@ -81,10 +86,10 @@
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.Black;
-            this.btnSubmit.Location = new System.Drawing.Point(0, 399);
+            this.btnSubmit.Location = new System.Drawing.Point(0, 418);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(0);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(465, 147);
+            this.btnSubmit.Size = new System.Drawing.Size(465, 128);
             this.btnSubmit.TabIndex = 13;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
@@ -172,22 +177,35 @@
             this.pnFields.Controls.Add(this.lbDiscount);
             this.pnFields.Controls.Add(this.txbxItem);
             this.pnFields.Controls.Add(this.txbxBrand);
+            this.pnFields.Controls.Add(this.menuStrip1);
             this.pnFields.Cursor = System.Windows.Forms.Cursors.Default;
             this.pnFields.ForeColor = System.Drawing.Color.Transparent;
-            this.pnFields.Location = new System.Drawing.Point(0, -23);
+            this.pnFields.Location = new System.Drawing.Point(0, 0);
             this.pnFields.Margin = new System.Windows.Forms.Padding(0);
             this.pnFields.Name = "pnFields";
             this.pnFields.Radius = 50;
-            this.pnFields.Size = new System.Drawing.Size(465, 448);
+            this.pnFields.Size = new System.Drawing.Size(465, 453);
             this.pnFields.TabIndex = 15;
             this.pnFields.Thickness = 5F;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Tomato;
+            this.label5.Location = new System.Drawing.Point(96, 57);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 16);
+            this.label5.TabIndex = 39;
+            this.label5.Text = "Invalid item name";
+            this.label5.Visible = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Tomato;
-            this.label4.Location = new System.Drawing.Point(198, 268);
+            this.label4.Location = new System.Drawing.Point(193, 284);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 16);
             this.label4.TabIndex = 38;
@@ -199,7 +217,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Tomato;
-            this.label3.Location = new System.Drawing.Point(127, 192);
+            this.label3.Location = new System.Drawing.Point(122, 208);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 16);
             this.label3.TabIndex = 37;
@@ -212,7 +230,7 @@
             this.txbxChange.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbxChange.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxChange.ForeColor = System.Drawing.Color.White;
-            this.txbxChange.Location = new System.Drawing.Point(160, 387);
+            this.txbxChange.Location = new System.Drawing.Point(155, 403);
             this.txbxChange.Name = "txbxChange";
             this.txbxChange.Size = new System.Drawing.Size(158, 22);
             this.txbxChange.TabIndex = 36;
@@ -223,7 +241,7 @@
             this.lbChange.AutoSize = true;
             this.lbChange.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbChange.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbChange.Location = new System.Drawing.Point(207, 353);
+            this.lbChange.Location = new System.Drawing.Point(202, 369);
             this.lbChange.Name = "lbChange";
             this.lbChange.Size = new System.Drawing.Size(63, 21);
             this.lbChange.TabIndex = 35;
@@ -235,7 +253,7 @@
             this.txbxAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbxAmount.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxAmount.ForeColor = System.Drawing.Color.White;
-            this.txbxAmount.Location = new System.Drawing.Point(262, 217);
+            this.txbxAmount.Location = new System.Drawing.Point(257, 233);
             this.txbxAmount.Name = "txbxAmount";
             this.txbxAmount.Size = new System.Drawing.Size(158, 22);
             this.txbxAmount.TabIndex = 34;
@@ -246,7 +264,7 @@
             this.lbTotal.AutoSize = true;
             this.lbTotal.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTotal.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbTotal.Location = new System.Drawing.Point(318, 187);
+            this.lbTotal.Location = new System.Drawing.Point(313, 203);
             this.lbTotal.Name = "lbTotal";
             this.lbTotal.Size = new System.Drawing.Size(45, 21);
             this.lbTotal.TabIndex = 33;
@@ -258,7 +276,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(55, 263);
+            this.label2.Location = new System.Drawing.Point(50, 279);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 21);
             this.label2.TabIndex = 32;
@@ -276,7 +294,7 @@
             this.txbxRecieved.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbxRecieved.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.txbxRecieved.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbxRecieved.Location = new System.Drawing.Point(52, 288);
+            this.txbxRecieved.Location = new System.Drawing.Point(47, 304);
             this.txbxRecieved.Margin = new System.Windows.Forms.Padding(4);
             this.txbxRecieved.MaxLength = 20;
             this.txbxRecieved.Multiline = false;
@@ -295,7 +313,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Tomato;
-            this.label1.Location = new System.Drawing.Point(149, 117);
+            this.label1.Location = new System.Drawing.Point(144, 133);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 16);
             this.label1.TabIndex = 30;
@@ -307,7 +325,7 @@
             this.lbPriceError.AutoSize = true;
             this.lbPriceError.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPriceError.ForeColor = System.Drawing.Color.Tomato;
-            this.lbPriceError.Location = new System.Drawing.Point(295, 116);
+            this.lbPriceError.Location = new System.Drawing.Point(290, 132);
             this.lbPriceError.Name = "lbPriceError";
             this.lbPriceError.Size = new System.Drawing.Size(71, 16);
             this.lbPriceError.TabIndex = 29;
@@ -319,7 +337,7 @@
             this.lbPrice.AutoSize = true;
             this.lbPrice.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrice.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbPrice.Location = new System.Drawing.Point(246, 112);
+            this.lbPrice.Location = new System.Drawing.Point(241, 128);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(44, 21);
             this.lbPrice.TabIndex = 19;
@@ -337,7 +355,7 @@
             this.txbxPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbxPrice.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.txbxPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbxPrice.Location = new System.Drawing.Point(241, 137);
+            this.txbxPrice.Location = new System.Drawing.Point(236, 153);
             this.txbxPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txbxPrice.MaxLength = 20;
             this.txbxPrice.Multiline = false;
@@ -356,7 +374,7 @@
             this.lbItem.AutoSize = true;
             this.lbItem.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbItem.ForeColor = System.Drawing.Color.White;
-            this.lbItem.Location = new System.Drawing.Point(55, 36);
+            this.lbItem.Location = new System.Drawing.Point(50, 52);
             this.lbItem.Name = "lbItem";
             this.lbItem.Size = new System.Drawing.Size(41, 21);
             this.lbItem.TabIndex = 14;
@@ -367,7 +385,7 @@
             this.lbQuantity.AutoSize = true;
             this.lbQuantity.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQuantity.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbQuantity.Location = new System.Drawing.Point(55, 187);
+            this.lbQuantity.Location = new System.Drawing.Point(50, 203);
             this.lbQuantity.Name = "lbQuantity";
             this.lbQuantity.Size = new System.Drawing.Size(70, 21);
             this.lbQuantity.TabIndex = 17;
@@ -385,7 +403,7 @@
             this.txbxColor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbxColor.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.txbxColor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbxColor.Location = new System.Drawing.Point(52, 212);
+            this.txbxColor.Location = new System.Drawing.Point(47, 228);
             this.txbxColor.Margin = new System.Windows.Forms.Padding(4);
             this.txbxColor.MaxLength = 20;
             this.txbxColor.Multiline = false;
@@ -404,7 +422,7 @@
             this.lbDiscount.AutoSize = true;
             this.lbDiscount.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDiscount.ForeColor = System.Drawing.Color.White;
-            this.lbDiscount.Location = new System.Drawing.Point(55, 112);
+            this.lbDiscount.Location = new System.Drawing.Point(50, 128);
             this.lbDiscount.Name = "lbDiscount";
             this.lbDiscount.Size = new System.Drawing.Size(98, 21);
             this.lbDiscount.TabIndex = 4;
@@ -422,7 +440,7 @@
             this.txbxItem.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbxItem.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbxItem.Location = new System.Drawing.Point(52, 61);
+            this.txbxItem.Location = new System.Drawing.Point(47, 77);
             this.txbxItem.Margin = new System.Windows.Forms.Padding(4);
             this.txbxItem.MaxLength = 200;
             this.txbxItem.Multiline = false;
@@ -448,7 +466,7 @@
             this.txbxBrand.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbxBrand.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.txbxBrand.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbxBrand.Location = new System.Drawing.Point(52, 137);
+            this.txbxBrand.Location = new System.Drawing.Point(47, 153);
             this.txbxBrand.Margin = new System.Windows.Forms.Padding(4);
             this.txbxBrand.MaxLength = 35;
             this.txbxBrand.Multiline = false;
@@ -462,17 +480,39 @@
             this.txbxBrand.Texts = "";
             this.txbxBrand.UnderlinedStyle = false;
             // 
-            // label5
+            // menuStrip1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Tomato;
-            this.label5.Location = new System.Drawing.Point(101, 41);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 16);
-            this.label5.TabIndex = 39;
-            this.label5.Text = "Invalid item name";
-            this.label5.Visible = false;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(465, 24);
+            this.menuStrip1.TabIndex = 40;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem,
+            this.logoutToolStripMenuItem});
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(50, 20);
+            this.toolStripMenuItem1.Text = "Menu";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // frmPurchaseDiscountedItem
             // 
@@ -484,6 +524,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "frmPurchaseDiscountedItem";
             this.Text = "Student Registration";
@@ -493,6 +534,8 @@
             this.pnBody.ResumeLayout(false);
             this.pnFields.ResumeLayout(false);
             this.pnFields.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -524,6 +567,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
     }
 }
 

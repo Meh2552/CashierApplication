@@ -18,7 +18,7 @@ namespace Pomaris_CashierApplication
             this.user_password = pass;
         }
 
-        public bool verigyLogin(string id, string pass)
+        public bool verifyLogin(string id, string pass)
         {
             if (this.user_id.Equals(id) && this.user_password.Equals(pass))
             {
