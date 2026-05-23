@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator.cs" />
     <Compile Include="Cashier.cs" />
     <Compile Include="DiscountedItem.cs" />
     <Compile Include="frmLoginAcoount.cs">
@@ -72,6 +73,7 @@
     <Compile Include="RoundedTxBx.Designer.cs">
       <DependentUpon>RoundedTxBx.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <Compile Include="UserAccount.cs" />
     <EmbeddedResource Include="frmLoginAcoount.resx">
       <DependentUpon>frmLoginAcoount.cs</DependentUpon>

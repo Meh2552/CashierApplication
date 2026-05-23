@@ -222,7 +222,7 @@
             this.txbxItem.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txbxItem.PasswordChar = false;
             this.txbxItem.PlaceholderColor = System.Drawing.Color.Gray;
-            this.txbxItem.PlaceholderText = "Item";
+            this.txbxItem.PlaceholderText = "Username";
             this.txbxItem.Size = new System.Drawing.Size(272, 32);
             this.txbxItem.TabIndex = 0;
             this.txbxItem.Texts = "";
@@ -248,7 +248,7 @@
             this.txbxBrand.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txbxBrand.PasswordChar = false;
             this.txbxBrand.PlaceholderColor = System.Drawing.Color.Gray;
-            this.txbxBrand.PlaceholderText = "0";
+            this.txbxBrand.PlaceholderText = "Password";
             this.txbxBrand.Size = new System.Drawing.Size(272, 32);
             this.txbxBrand.TabIndex = 1;
             this.txbxBrand.Texts = "";
