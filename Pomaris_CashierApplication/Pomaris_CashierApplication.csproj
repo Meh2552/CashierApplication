@@ -46,7 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cashier.cs" />
     <Compile Include="DiscountedItem.cs" />
+    <Compile Include="frmLoginAcoount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginAcoount.Designer.cs">
+      <DependentUpon>frmLoginAcoount.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPurchaseDiscountedItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +72,10 @@
     <Compile Include="RoundedTxBx.Designer.cs">
       <DependentUpon>RoundedTxBx.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserAccount.cs" />
+    <EmbeddedResource Include="frmLoginAcoount.resx">
+      <DependentUpon>frmLoginAcoount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPurchaseDiscountedItem.resx">
       <DependentUpon>frmPurchaseDiscountedItem.cs</DependentUpon>
     </EmbeddedResource>
